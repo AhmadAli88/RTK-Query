@@ -28,7 +28,7 @@ const UsersComponent = () => {
   };
 
   return (
-    <div>
+    <div style={{textAlign: 'center'}}>
       <h2>Users List</h2>
       <input
         type="text"
@@ -46,8 +46,8 @@ const UsersComponent = () => {
 
       <ul>
         {users.map((user) => (
-          <li key={user.id}>
-            {user.name} ({user.email})
+          <li key={user.id} className='table_styling'>
+           <span style={{marginLeft: '30px'}}>{user.name} </span> ({user.email})
             <button onClick={() => handleUpdateUser(user.id)}>Update</button>
             <button onClick={() => handleDeleteUser(user.id)}>Delete</button>
           </li>
